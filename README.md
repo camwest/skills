@@ -1,9 +1,9 @@
 # skills
 
-Agent skills by [Cameron Westland](https://cameronwestland.com), installable via [skills.sh](https://skills.sh):
+Agent skills by [Cameron Westland](https://cameronwestland.com), installable individually via [skills.sh](https://skills.sh):
 
 ```bash
-npx skills add camwest/skills
+npx skills add camwest/skills --skill <name>
 ```
 
 Works with Claude Code, Codex, and other agents that support the `SKILL.md` format.
@@ -11,6 +11,10 @@ Works with Claude Code, Codex, and other agents that support the `SKILL.md` form
 ## Skills
 
 ### [ground-in-priors](skills/ground-in-priors/SKILL.md)
+
+```bash
+npx skills add camwest/skills --skill ground-in-priors
+```
 
 Research and compare credible precedents before proposing or implementing fixes, features, dependencies, architecture, or product ideas.
 
