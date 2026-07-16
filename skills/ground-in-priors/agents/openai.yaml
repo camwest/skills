@@ -1,0 +1,6 @@
+interface:
+  display_name: "Ground in Priors"
+  short_description: "Research precedents before inventing solutions"
+  default_prompt: "Use $ground-in-priors to research credible precedents and justify the least-inventive viable approach before implementation."
+policy:
+  allow_implicit_invocation: false
