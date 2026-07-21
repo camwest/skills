@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Surface possible conversational residue in durable text artifacts.
+"""Surface possible conversational or chronology residue in durable text artifacts.
 
 This is a heuristic review aid. It does not determine whether a match is wrong
 and it never rewrites the source file.
@@ -102,6 +102,12 @@ RULES: tuple[Rule, ...] = (
         r"\b(?:this|the)\s+(?:draft|write-?up|deliverable)\b",
         "May describe the production artifact rather than its subject.",
     ),
+    compile_rule(
+        "temporal-transition",
+        "review",
+        r"\b(?:previously|formerly|used\s+to|no\s+longer|now|currently|at\s+present|as\s+of|moved\s+(?:from|to)|migrated\s+(?:from|to)|was\s+(?:replaced|renamed|moved|migrated)|became)\b",
+        "May narrate evolution in a current-state artifact; verify that the history has a reader-relevant temporal role.",
+    ),
 )
 
 
@@ -166,7 +172,7 @@ def scan_file(path: Path) -> list[Finding]:
 
 def parse_args(argv: Sequence[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Surface possible conversation residue in Markdown and text artifacts."
+        description="Surface possible conversation or chronology residue in Markdown and text artifacts."
     )
     parser.add_argument("paths", nargs="+", help="Files or directories to scan")
     parser.add_argument(

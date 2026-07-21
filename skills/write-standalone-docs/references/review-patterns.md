@@ -54,6 +54,16 @@ Words such as `this`, `that`, `above`, `earlier`, `here`, or `the answer` depend
 - Repair: name the company or party responsible for each action.
 - Keep when: the document establishes a stable organizational author and the antecedent remains clear.
 
+### Chronology leakage
+
+A current-state artifact narrates the decisions or transitions that produced the present instead of stating the present coherently.
+
+- Candidate: “Platform ownership moved from Research to Product on May 27; Research previously owned the workflow too.”
+- Repair: “Product owns the platform. Research owns the workflow that produces its inputs.” Link the transfer record when its date or rationale affects current work.
+- Keep when: the artifact is a decision record, changelog, retrospective, time-stamped report, or explanation whose purpose includes why the current state exists.
+
+Chronology leakage differs from production residue. The history may be true domain evidence and still be misplaced for the document's purpose.
+
 ## What not to flatten
 
 Standalone does not mean context-free in the abstract. It means self-sufficient for its intended audience.
@@ -63,18 +73,21 @@ Keep:
 - direct second-person instructions when the reader is clear;
 - attributed first-person testimony when the testimony is evidence;
 - explicit counterarguments, falsifiers, and rejected options;
+- historical rationale that protects a live constraint or prevents an unsafe reversal;
+- dates and transitions in decision records, changelogs, retrospectives, and time-stamped reports;
 - document navigation such as “see Evidence and priors” when it names a real section;
 - the commissioning record when approval, compliance, or reproducibility requires it;
 - domain vocabulary the audience understands.
 
 ## Review procedure for ambiguous hits
 
-For each hit, record four judgments:
+For each hit, record five judgments:
 
 1. **Speaker:** Who is speaking or being answered?
 2. **Antecedent:** Where can the reader find the proposition or object referenced?
 3. **Evidentiary role:** What claim does this reference support?
 4. **Counterfactual:** If the source chat vanished, what premise would be lost?
+5. **Temporal role:** What current interpretation or action depends on this history?
 
 Choose one disposition:
 
@@ -82,12 +95,15 @@ Choose one disposition:
 - `translate`: a useful commissioning preference that should become structure or criteria;
 - `attribute`: source material that is genuine evidence;
 - `name`: a valid contrast whose target or actor is implicit;
+- `separate`: useful history that belongs in an explicit rationale, decision-history, or changelog section;
 - `keep`: already understandable and purposeful for the intended audience.
 
 ## Whole-document checks the scanner cannot perform
 
 - The executive summary must not rely on definitions introduced only later unless it links or defines them.
 - Section order must reflect the argument, not the order of messages or meetings.
+- Current-state sections must not require the reader to reconstruct a decision sequence before understanding the present.
+- Historical detail in a current-state section must explain a live constraint, responsibility, decision, or risk.
 - A named source must be sufficiently identified for the audience to assess it.
 - The audit trail must separate observed facts, external priors, interpretations, and decisions.
 - The audit trail must not invent a source date, participant role, meeting purpose, or research status from task metadata.

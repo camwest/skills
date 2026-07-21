@@ -1,6 +1,6 @@
 ---
 name: write-standalone-docs
-description: Draft or revise reports, strategy documents, memos, specifications, proposals, and other durable artifacts so they make sense without the chat, meeting, screenshot, or task that produced them. Use when converting conversation into a document or reviewing prose for ghost arguments, invisible interlocutors, leaked instructions, commissioning-context residue, dangling references, or irrelevant process provenance.
+description: Draft or revise reports, strategy documents, memos, specifications, proposals, and other durable artifacts so they make sense without the chat, meeting, screenshot, task, or decision sequence that produced them. Use when converting conversation into a document or reviewing prose for ghost arguments, invisible interlocutors, leaked instructions, commissioning-context residue, chronology leakage, dangling references, or irrelevant process provenance.
 ---
 
 # Write Standalone Docs
@@ -17,6 +17,14 @@ Treat source material as three different things:
 
 Treat the user-assistant exchange that commissioned the artifact as production context by default. Do not relabel it as an interview, internal strategy discussion, or first-party research to give unsupported claims provenance. It becomes domain evidence only when the user explicitly supplies it as a meeting record, interview, decision log, legal record, or other source that the artifact is meant to analyze.
 
+Choose the artifact's temporal stance separately from its source classification:
+
+- **Current-state:** Describe the system, responsibility, policy, or decision as it stands. Make it readable like a chess position without replaying the moves that produced it.
+- **Historical:** Preserve sequence, transitions, dates, and superseded states because change over time is the subject.
+- **Split:** State the current position first, then separate the history or rationale that the reader needs to interpret it.
+
+For operational, reference, and current-state artifacts, default to current-state when that purpose is safely inferable. Do not make the reader reconstruct the present from a chronology.
+
 Do not confuse standalone writing with neutral or bloodless writing. A standalone document may argue strongly, use first or second person deliberately, quote a conversation as evidence, or rebut a named proposition. The requirement is that the document supplies the audience, antecedent, and evidentiary role for each one.
 
 ## Workflow
@@ -28,6 +36,8 @@ Before drafting or revising, identify:
 - the intended reader;
 - the decision, action, or understanding the document should enable;
 - what the reader may safely be assumed to know;
+- whether its temporal stance is current-state, historical, or split;
+- which snapshot, version, or effective date matters, if any;
 - which sources or people must remain attributable;
 - whether the requested output is the clean artifact, an audit, or both.
 
@@ -40,10 +50,14 @@ Sort the useful source material into:
 - **claims and decisions**;
 - **observations and evidence**;
 - **counterarguments and trade-offs**;
+- **historical transitions and rationale**;
+- **future plans and hypotheses**;
 - **preferences about the deliverable**;
 - **production metadata**.
 
-Move the first three into the artifact when relevant. Convert preferences into structure or editorial choices. Exclude production metadata unless the artifact is explicitly about the production process.
+Move claims, evidence, and trade-offs into the artifact when relevant. Place historical and future material according to the temporal stance. Convert preferences into structure or editorial choices. Exclude production metadata unless the artifact is explicitly about the production process.
+
+In a current-state artifact, retain a historical detail only when removing it would make a live constraint, responsibility, decision, or risk unsafe or misleading. Otherwise translate it into the present state, move it to an explicitly historical section, or link to an appropriate decision record or changelog. In a split artifact, make the current state usable before presenting its rationale or evolution.
 
 For interviews, customer calls, research threads, and legal or operational records, the conversation itself may be evidence. In that case, attribute the observation because it supports a claim—not because it happened to be available in the task.
 
@@ -59,6 +73,8 @@ Apply these tests:
 - **Evidence test:** Is the contrast supported by a source, observation, or explicit alternative in the document?
 - **Audience test:** Is the speaker behind `we`, `you`, `they`, or a named person unambiguous and relevant?
 - **Delete-the-chat test:** Would the paragraph still make sense if the source conversation disappeared?
+- **Board-state test:** Can the reader understand the current position without replaying the sequence that produced it?
+- **History-value test:** What present interpretation or action would become unsafe if this historical detail disappeared?
 - **Document-purpose test:** Does this detail help the reader use or assess the artifact?
 
 If a sentence fails, rewrite it as an affirmative rule, name the alternative it evaluates, add the missing evidence, or remove it.
@@ -86,6 +102,8 @@ Read the entire artifact from the title down without consulting the source conve
 - every rebuttal exposes the proposition it rebuts;
 - names, screenshots, chats, and task references have a necessary evidentiary role;
 - the audit trail records sources and observations, not drafting choreography;
+- the present state is understandable without reconstructing its evolution;
+- historical transitions are either the artifact's subject or have a stated present-day role;
 - uncertainty is stated as uncertainty rather than conversational hedging;
 - section transitions follow the document's logic rather than the order of the chat;
 - removing the source task would not erase a premise needed to understand the conclusion.
@@ -116,6 +134,7 @@ Use these transformations as patterns, not mechanical substitutions:
 | “The screenshot shows …” | Attribute the specific observed behavior if the screenshot is evidence; otherwise state the behavior. |
 | “See above” or “as noted earlier” | Name the section, claim, or evidence being referenced. |
 | “The source task asked for an audit trail.” | Include an audit trail without mentioning the task. |
+| “Ownership moved from A to B in May.” | “B owns …” Keep or link the transfer record only if its date or rationale affects current work. |
 
 Read [review-patterns.md](references/review-patterns.md) when a hit is ambiguous or when designing a document-specific audit.
 
@@ -130,6 +149,8 @@ Read [review-patterns.md](references/review-patterns.md) when a hit is ambiguous
 - Do not invent an external opponent to make an argument feel motivated.
 - Do not replace a specific source with vague authority such as “research shows.”
 - Do not let a clean style hide a missing premise. Supply the premise or narrow the claim.
+- Do not erase history that explains a live constraint, guards against reversing a decision, or is itself the artifact's subject.
+- Do not treat inaccessible Git history as an adequate substitute for rationale the intended reader needs.
 - Do not treat scanner output as a verdict.
 
 ## Completion criteria
@@ -142,4 +163,6 @@ The artifact is ready only when:
 4. the audit trail can be followed to real sources;
 5. the scanner has no unexplained high-confidence hits;
 6. the rewrite has not silently expanded the artifact's substantive claims;
-7. the final handoff keeps editorial commentary outside the artifact.
+7. a current-state reader can understand the present without reconstructing its history;
+8. every retained historical detail has a reader-relevant temporal role;
+9. the final handoff keeps editorial commentary outside the artifact.
