@@ -24,6 +24,20 @@ Coding agents default to inventing solutions. This skill is a rigorous, fail-clo
 Use $ground-in-priors to research and fix this viewport scrolling bug.
 ```
 
+### [write-standalone-docs](skills/write-standalone-docs/SKILL.md)
+
+```bash
+npx skills add camwest/skills --skill write-standalone-docs
+```
+
+Turn chats, meetings, screenshots, and task context into durable reports, strategy documents, memos, specifications, and proposals that make sense to a cold reader.
+
+This skill separates domain evidence from commissioning context and production residue. It catches ghost arguments, invisible interlocutors, leaked instructions, provenance laundering, dangling references, and substantive expansion disguised as cleanup. A bundled scanner surfaces likely residue without treating second person, negation, or disagreement as automatic errors.
+
+```text
+Use $write-standalone-docs to make this strategy memo fully standalone for a cold reader.
+```
+
 ## License
 
 [MIT](LICENSE)

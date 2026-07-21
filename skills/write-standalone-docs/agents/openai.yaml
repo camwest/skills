@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Standalone Docs"
+  short_description: "Remove conversational residue from durable docs"
+  default_prompt: "Use $write-standalone-docs to make this document fully standalone for a cold reader."
