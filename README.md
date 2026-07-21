@@ -30,12 +30,12 @@ Use $ground-in-priors to research and fix this viewport scrolling bug.
 npx skills add camwest/skills --skill write-standalone-docs
 ```
 
-Turn chats, meetings, screenshots, and task context into durable reports, strategy documents, memos, specifications, and proposals that make sense to a cold reader.
+Turn source conversations and decision history into durable documents that make sense to a cold reader.
 
-This skill separates domain evidence from commissioning context and production residue. It catches ghost arguments, invisible interlocutors, leaked instructions, provenance laundering, dangling references, and substantive expansion disguised as cleanup. A bundled scanner surfaces likely residue without treating second person, negation, or disagreement as automatic errors.
+The skill supports three temporal stances: current state, history, or a split between them. It separates production context from the evidence and rationale that belong in the document. The bundled scanner flags conversational residue and temporal transitions; a reviewer makes the final judgment.
 
 ```text
-Use $write-standalone-docs to make this strategy memo fully standalone for a cold reader.
+Use $write-standalone-docs to make this strategy memo standalone and explicit about its current-state or historical scope.
 ```
 
 ## License
