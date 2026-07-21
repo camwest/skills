@@ -67,10 +67,10 @@ Keep the substantive scope stable. A standalone-document pass is not permission 
 
 ### 4. Run the residue scan
 
-For a local Markdown or text artifact, run:
+For a local Markdown or text artifact, run the scanner bundled with this skill, where `<skill-dir>` is the directory containing this SKILL.md:
 
 ```bash
-python3 ~/.codex/skills/write-standalone-docs/scripts/audit_conversation_residue.py PATH
+python3 <skill-dir>/scripts/audit_conversation_residue.py PATH
 ```
 
 The scanner reports high-confidence production references and lower-confidence review cues with line numbers. It never proves that a sentence is wrong and never rewrites text. Review every hit in context; valid instructions, quotations, or documented alternatives may remain.
