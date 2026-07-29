@@ -10,6 +10,20 @@ Works with Claude Code, Codex, and other agents that support the `SKILL.md` form
 
 ## Skills
 
+### [deliver-feedback](skills/deliver-feedback/SKILL.md)
+
+```bash
+npx skills add camwest/skills --skill deliver-feedback
+```
+
+Turn rough notes, transcripts, and reactions into concise feedback that preserves the sender's evidence, disagreement, uncertainty, and voice.
+
+The skill can organize collaborative feedback as I Like / I Wish / I Wonder without forcing praise or symmetrical sections. It keeps observations, interpretations, questions, and requests distinct, grounds criticism in the work product, and uses `unslop` and `stop-slop` for an optional final tone pass when those skills are installed.
+
+```text
+Use $deliver-feedback to turn my walkthrough transcript into feedback the author can act on.
+```
+
 ### [ground-in-priors](skills/ground-in-priors/SKILL.md)
 
 ```bash

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deliver Feedback"
+  short_description: "Turn raw reactions into useful feedback"
+  default_prompt: "Use $deliver-feedback to turn these notes into concise, recipient-ready feedback."
